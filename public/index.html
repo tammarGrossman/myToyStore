@@ -23,6 +23,32 @@
 <body>
 
   <h2>API Routes</h2>
+  <h3>API Routes Of Users</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Route</th>
+        <th>Method</th>
+        <th>Description</th>
+        <th>Parameters</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Route A -->
+      <tr>
+        <td>api/v1/users/signIn</td>
+        <td>POST</td>
+        <td>Add a new User</td>
+      </tr>
+
+      <tr>
+        <td>api/v1/users/logIn</td>
+        <td>POST</td>
+        <td>Log an existing User</td>
+      </tr>
+      </tbody>
+  </table>
+  <h3>API Routes Of Toys</h3>
 
   <table>
     <thead>
@@ -36,7 +62,7 @@
     <tbody>
       <!-- Route A -->
       <tr>
-        <td>/toys/domain</td>
+        <td>api/v1/toys/</td>
         <td>GET</td>
         <td>Get all toys in the system</td>
         <td>page</td>
@@ -44,7 +70,7 @@
 
       <!-- Route B -->
       <tr>
-        <td>/toys/search</td>
+        <td>api/v1/toys/search</td>
         <td>GET</td>
         <td>Search for toys by name or info</td>
         <td>s, page</td>
@@ -52,7 +78,7 @@
 
       <!-- Route C -->
       <tr>
-        <td>/toys/:category/domain</td>
+        <td>api/v1/toys/category/:category</td>
         <td>GET</td>
         <td>Get toys by category</td>
         <td>catname, page</td>
@@ -60,7 +86,7 @@
 
       <!-- Route D -->
       <tr>
-        <td>/toys/</td>
+        <td>api/v1/toys/add</td>
         <td>POST</td>
         <td>Add a new toy</td>
         <td>Requires TOKEN</td>
@@ -68,7 +94,7 @@
 
       <!-- Route E -->
       <tr>
-        <td>/toys/:editId</td>
+        <td>api/v1/toys/:editId</td>
         <td>PUT</td>
         <td>Edit a toy</td>
         <td>Requires TOKEN</td>
@@ -76,7 +102,7 @@
 
       <!-- Route F -->
       <tr>
-        <td>/toys/:delId</td>
+        <td>api/v1/toys/:delId</td>
         <td>DELETE</td>
         <td>Delete a toy</td>
         <td>Requires TOKEN</td>
@@ -84,7 +110,7 @@
 
       <!-- Single Toy Route -->
       <tr>
-        <td>/toys/:single/domain</td>
+        <td>api/v1/toys/single/:id</td>
         <td>GET</td>
         <td>Get a single toy by ID</td>
         <td>id</td>
