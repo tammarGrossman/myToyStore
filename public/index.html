@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Routes</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>API Routes</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Route</th>
+        <th>Method</th>
+        <th>Description</th>
+        <th>Parameters</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Route A -->
+      <tr>
+        <td>/toys/domain</td>
+        <td>GET</td>
+        <td>Get all toys in the system</td>
+        <td>page</td>
+      </tr>
+
+      <!-- Route B -->
+      <tr>
+        <td>/toys/search</td>
+        <td>GET</td>
+        <td>Search for toys by name or info</td>
+        <td>s, page</td>
+      </tr>
+
+      <!-- Route C -->
+      <tr>
+        <td>/toys/:category/domain</td>
+        <td>GET</td>
+        <td>Get toys by category</td>
+        <td>catname, page</td>
+      </tr>
+
+      <!-- Route D -->
+      <tr>
+        <td>/toys/</td>
+        <td>POST</td>
+        <td>Add a new toy</td>
+        <td>Requires TOKEN</td>
+      </tr>
+
+      <!-- Route E -->
+      <tr>
+        <td>/toys/:editId</td>
+        <td>PUT</td>
+        <td>Edit a toy</td>
+        <td>Requires TOKEN</td>
+      </tr>
+
+      <!-- Route F -->
+      <tr>
+        <td>/toys/:delId</td>
+        <td>DELETE</td>
+        <td>Delete a toy</td>
+        <td>Requires TOKEN</td>
+      </tr>
+
+      <!-- Single Toy Route -->
+      <tr>
+        <td>/toys/:single/domain</td>
+        <td>GET</td>
+        <td>Get a single toy by ID</td>
+        <td>id</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
