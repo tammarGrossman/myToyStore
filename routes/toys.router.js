@@ -4,18 +4,18 @@ const toysController  = require('../controllers/toys.controller');
 const toysRouter = express.Router();
 
 // Route to get all toys
-toysRouter.route('/domain/toys')
+toysRouter.route('/')
   .get(toysController.getAll);
 
-toysRouter.route('/domain/toys/search')
+toysRouter.route('/search')
   .get(toysController.getBySearch);
-toysRouter.route('/domain/toys/category/:catname')
+toysRouter.route('/category/:catname')
   .get(toysController.getByCategory);
 
-toysRouter.route('domain/toys/single/:id')
+toysRouter.route('/single/:id')
   .get(toysController.getByID)
 
-toysRouter.route('')
+toysRouter.route('/add')
   .post(authentication.isLoggedIn,toysController.add)
   toysRouter.route('/:toyID')
   .all(authentication.isLoggedIn)
