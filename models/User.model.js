@@ -18,7 +18,8 @@ const myUserSchema={
       },
       password: {
         type: String,
-        required: true
+        required: true,
+        select:false
       },
       date_created: {
         type:Date,

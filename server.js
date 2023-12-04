@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const app = require("./app");
 
 dotenv.config({path:'./config.env'});
+
 const MONGODB_URL = process.env.MONGODB_URL;
 const PORT = process.env.PORT || 8001;
 // connect to database

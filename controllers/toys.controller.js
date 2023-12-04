@@ -55,6 +55,7 @@ const add = asyncWrap(async (req, res) => {
 } 
 )
 const update = asyncWrap(async (req, res) => {
+  console.log('hello');
   const toyId = req.params.toyID;
   const updatedToyData = req.body;
   const updatedToy = await ToyModel.findOneAndUpdate({_id:toyId},updatedToyData,{includeResultMetadata:true});
